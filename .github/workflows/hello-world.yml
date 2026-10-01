@@ -14,8 +14,8 @@ jobs:
         with:
           path: ~/.npm
           key: npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-      - run: npm ci
-      - run: npm test
+      - run: npm run ci
+      - run: npm run test
       - if: always() # Vous permet d'exécuter la step même si les commandes au dessus échouent.
         # Implicitement toutes les steps ont un : if: success()
         run: |
