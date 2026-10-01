@@ -15,4 +15,4 @@ steps:
       NODE_ENV: test
 
   - if: always()
-    run: echo "Status : ${{ job.status }}"
+    run: 'echo "Status : ${{ job.status }}"'
